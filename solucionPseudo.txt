@@ -1,5 +1,23 @@
 Inicio
     
+    Escribe " CAJA DE LA TIENDA "
+
+
+    p_unitario = -1 
+    unidades = 0
+
+    
+    Mientras p_unitario >= 0 
+        Escribe "Introduce el precio unitario (0 para terminar): "
+        Lee num
+
+        Si num < 0
+            Escribe "El precio no puede ser en negativo"
+        Sino
+            p_unitario = num
+
+    
+    
     
 
 Fin
