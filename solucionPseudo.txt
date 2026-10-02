@@ -4,17 +4,21 @@ Inicio
 
 
     p_unitario = -1 
-    unidades = 0
+    unidades = -1
 
     
-    Mientras p_unitario >= 0 
+    Mientras p_unitario < 0 
         Escribe "Introduce el precio unitario (0 para terminar): "
         Lee num
 
         Si num < 0
             Escribe "El precio no puede ser en negativo"
+        Si num == 0
+            p_unitario = num
         Sino
             p_unitario = num
+            
+            Mientras unidades >= 0
 
     
     
