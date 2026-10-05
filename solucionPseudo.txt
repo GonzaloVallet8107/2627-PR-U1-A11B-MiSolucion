@@ -25,7 +25,7 @@ Inicio
         Sino
             p_unitario += num
             
-            Mientras unidades < 0
+            Mientras unidades != 0
                 Escribe "Introduce el número de unidades: "
                 Lee unid
                 
