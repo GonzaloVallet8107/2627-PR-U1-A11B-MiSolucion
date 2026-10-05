@@ -14,14 +14,25 @@ Inicio
         Si num < 0
             Escribe "El precio no puede ser en negativo"
         Si num == 0
-            p_unitario = num
+            importe = p_unitario * unidades
+            
+            Escribe "Resumen de la compra"
+            Escribe "Unidades compradas: " + unidades
+            
         Sino
             p_unitario = num
             
-            Mientras unidades >= 0
-
-    
-    
+            Mientras unidades < 0
+                Escribe "Introduce el número de unidades: "
+                Lee unid
+                
+                Si unid < 0
+                    Escribe "La cantidad debe ser mayor que 0."
+                Si unid >= 0
+                    unidades = unid
+                
+                    
+       
     
 
 Fin
