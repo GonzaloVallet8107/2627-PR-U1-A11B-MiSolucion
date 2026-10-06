@@ -1,31 +1,56 @@
 Inicio
-    
     Escribe " CAJA DE LA TIENDA "
-
+    
     terminar = -1
-    p_unitario = -1 
-    unidades = -1
-
+    p_unitario = 0 
+    unidades = 0
+    importe = 0
+    descuento = 0
+    porcentaje = 0
     
     Mientras terminar <= 0 
+    
         Escribe "Introduce el precio unitario (0 para terminar): "
         Lee num
-
-        Si num < 0
+        Mientras num < 0
             Escribe "El precio no puede ser en negativo"
+            Escribe "Introduce el precio unitario (0 para terminar): "
+            Lee num
+        FinMientras
+    
         Si num == 0
-             
-            Escribe "Resumen de la compra"
-            Escribe "Unidades compradas: " + unidades
-            Escribe "Importe antes del descuento: " + 
-            Escribe "Descuento aplicado: " +
-            Escribe "Descuento: " +
-            Escribe "Importe total: " + 
+            Si unidades == 0
+                Escribe "No se han registrado productos"
+            Sino
+    
+                Si importe < 50
+                    porcentaje = 0
+                Sino
+                    Si importe < 100
+                        porcentaje = 5
+                    Sino
+                        porcentaje = 10
+                    FinSi
+                FinSi
+                descuento = importe * porcentaje / 100
+    
+                Escribe "RESUMEN DE LA COMPRA"
+                Escribe "Unidades compradas: " + unidades
+                Escribe "Importe antes del descuento: " + importe
+                Escribe "Descuento aplicado: " + porcentaje + " %"
+                Escribe "Descuento: " + descuento
+                Escribe "Importe total: " + (importe - descuento)
+    
+            FinSi
+    
             terminar = 1
+    
         Sino
+    
             p_unitario += num
             
-            Mientras unidades != 0
+            Mientras unid <= 0
+    
                 Escribe "Introduce el número de unidades: "
                 Lee unid
                 
@@ -33,9 +58,13 @@ Inicio
                     Escribe "La cantidad debe ser mayor que 0."
                 Si unid > 0
                     unidades += unid
-                
-                    
-       
+                    importe += num * unid
+                FinSi
     
-
+            FinMientras
+    
+            unid = 0
+    
+        FinSi
+    FinMientras
 Fin
